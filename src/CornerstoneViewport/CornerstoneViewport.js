@@ -6,7 +6,7 @@ import ViewportOverlay from '../ViewportOverlay/ViewportOverlay.js';
 import LoadingIndicator from '../LoadingIndicator/LoadingIndicator.js';
 import ViewportOrientationMarkers from '../ViewportOrientationMarkers/ViewportOrientationMarkers.js';
 import cornerstone from 'cornerstone-core';
-import cornerstoneTools from 'cornerstone-tools';
+import cornerstoneTools from 'cornerstone-tools2-drbrain';
 import ReactResizeDetector from 'react-resize-detector/lib/index.js';
 import debounce from 'lodash.debounce';
 
