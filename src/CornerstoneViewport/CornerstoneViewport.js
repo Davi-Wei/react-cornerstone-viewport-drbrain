@@ -343,7 +343,11 @@ class CornerstoneViewport extends Component {
    * @memberof CornerstoneViewport
    */
   getOverlay() {
-    const { viewportOverlayComponent: Component, imageIds } = this.props;
+    const {
+      viewportOverlayComponent: Component,
+      imageIds,
+      description,
+    } = this.props;
     const {
       imageIdIndex,
       scale,
@@ -363,6 +367,7 @@ class CornerstoneViewport extends Component {
           windowWidth={windowWidth}
           windowCenter={windowCenter}
           imageId={imageId}
+          description={description}
         />
       )
     );

@@ -43,10 +43,17 @@ class ViewportOverlay extends PureComponent {
     imageId: PropTypes.string.isRequired,
     imageIndex: PropTypes.number.isRequired,
     stackSize: PropTypes.number.isRequired,
+    description: PropTypes.string.isRequired,
   };
 
   render() {
-    const { imageId, scale, windowWidth, windowCenter } = this.props;
+    const {
+      imageId,
+      scale,
+      windowWidth,
+      windowCenter,
+      description,
+    } = this.props;
 
     if (!imageId) {
       return null;
@@ -87,6 +94,7 @@ class ViewportOverlay extends PureComponent {
         <div className="top-left overlay-element">
           <div>{formatPN(patientName)}</div>
           <div>{patientId}</div>
+          <div>{description}</div>
         </div>
         <div className="top-right overlay-element">
           <div>{studyDescription}</div>
