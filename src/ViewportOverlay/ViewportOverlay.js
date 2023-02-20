@@ -64,7 +64,7 @@ class ViewportOverlay extends PureComponent {
       cornerstone.metaData.get('generalSeriesModule', imageId) || {};
     const imagePlaneModule =
       cornerstone.metaData.get('imagePlaneModule', imageId) || {};
-    const { rows, columns, sliceThickness, sliceLocation } = imagePlaneModule;
+    const { rows, columns, sliceThickness, sliceLocation, spacingBetweenSlices } = imagePlaneModule;
     const { seriesNumber, seriesDescription } = seriesMetadata;
 
     const generalStudyModule =
@@ -121,8 +121,15 @@ class ViewportOverlay extends PureComponent {
               {isValidNumber(sliceLocation)
                 ? `Loc: ${formatNumberPrecision(sliceLocation, 2)} mm `
                 : ''}
+            </div>
+            <div>
               {sliceThickness
                 ? `Thick: ${formatNumberPrecision(sliceThickness, 2)} mm`
+                : ''}
+            </div>
+            <div>
+              {spacingBetweenSlices
+                ? `Spacing: ${formatNumberPrecision(spacingBetweenSlices, 2)} mm`
                 : ''}
             </div>
             <div>{seriesDescription}</div>
